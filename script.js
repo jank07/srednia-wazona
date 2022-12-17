@@ -8,6 +8,6 @@ if (string.trim().length == 0 || string == null || parseInt(string).length < str
 for (let i = 0; i < string.length; i++) {
 
     if (string[i] <= 10 && string[i] >= 1) {
-
+        numbers.push(string[i])
     }
 }
