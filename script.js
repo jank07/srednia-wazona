@@ -1,13 +1,20 @@
-let string = document.querySelector('#numberWeight').value;
-document.querySelector('.submitNumberWeight').onclick = function() {
-    let numbers = [];
+let weight = document.querySelector('.weight')
+    document.querySelector('.submitNumberWeight').onclick = function() { 
     let string = document.querySelector('#numberWeight').value;
-    string = string.split(',')
-}
-if (string.trim().length == 0 || string == null || parseInt(string).length < string.length) alert('error')
-for (let i = 0; i < string.length; i++) {
+    let numbers = [];
+    if (string == null || string.trim().length == 0) alert('error')
 
-    if (string[i] <= 10 && string[i] >= 1) {
+    else {
+        string = string.split(',')
+        for (let i = 0; i < string.length; i++) {
+        if (parseInt(string[i]) <= 10 && parseInt(string[i]) >= 1) {
         numbers.push(string[i])
+        
     }
+}
+    console.log(numbers)
+    numbers.forEach(el => {
+        weight[el].style.display = 'block';
+    })
+}
 }
