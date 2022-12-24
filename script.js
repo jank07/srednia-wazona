@@ -1,5 +1,10 @@
-let weight = document.querySelector('.weight')
-    document.querySelector('.submitNumberWeight').onclick = function() { 
+document.querySelector('.submitNumberWeight').onclick = function() { 
+        let weight = document.querySelectorAll('.weight');
+        // let weights = {}; 
+        // for(let i = 1; i <= 10; i++) {
+        //     weights["weight" + i] = document.querySelector('.weight' + i)
+        // }
+
         let string = document.querySelector('#numberWeight').value;
         let numbers = [];
         if (string == null || string.trim().length == 0) {
@@ -19,12 +24,10 @@ let weight = document.querySelector('.weight')
         numbers.forEach(num => {
             console.log(num);
             num = parseInt(num);
-            weight.at(num).style.display = 'block';
+            // weight[num].style.display = 'block';
+            console.log(weights[num]);
         })
-        const arr2 = [1, 2, 3]
-        arr2.forEach (el => {
-
-        })
+        
     }
 }
 
